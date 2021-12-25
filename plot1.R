@@ -17,6 +17,6 @@ with(dt_2days,
           main='Global Active Power'
           )
 )
-dev.copy(png, file = "plot1.png")
+dev.copy(png, file = "plot1.png",height=480,width=480)
 dev.off()
      

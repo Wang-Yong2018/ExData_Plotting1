@@ -19,5 +19,5 @@ with(dt_2days,
           )
 )
 
-dev.copy(png, file = "plot2.png")
+dev.copy(png, file = "plot2.png",height=480,width=480)
 dev.off()
