@@ -9,7 +9,7 @@ dt <- getting_data(url)
 # check memory usage. It is about 143MB,  for the dataset. 
 print(tables(silent=TRUE)%>%select(c(1,2,3,4)))
 dt_2days <-dt %>%filter(datetime >=as.Date('2007-02-01') &datetime <as.Date('2007-02-03' ))
-par(mfrow=c(2,2),mar=c(4,4,2,1),oma=c(0,0,2,0))
+par(mfrow=c(2,2))
 
 with(dt_2days,{
 # plot 1st chart
@@ -50,9 +50,8 @@ with(dt_2days,{
        legend=c("Sub_metering_1",
                 "Sub_metering_2",
                 "Sub_metering_3"),
-       pch='_',
-       pt.cex=1,
-       pt.lwd=2
+       lty=1,
+       pt.cex = 0.7
        )
 # plot 4th chart
     plot(Global_reactive_power~datetime,
